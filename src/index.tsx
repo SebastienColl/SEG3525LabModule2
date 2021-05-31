@@ -3,10 +3,23 @@ import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { Navbar } from 'react-bootstrap';
+import { FaOpencart } from "react-icons/fa"
 
 ReactDOM.render(
   <React.StrictMode>
+    <Navbar bg="dark" variant="dark">
+        <Navbar.Brand href="#home">
+          <FaOpencart/>{' '}
+          Épicerie Express
+        </Navbar.Brand>
+      </Navbar>
     <App />
+    <footer className="footer">
+      <div className="container">
+        <span className="text-muted">Site Web conçu par Sébastien Coll</span>
+      </div>
+    </footer>
   </React.StrictMode>,
   document.getElementById('root')
 );
