@@ -1,5 +1,5 @@
-import React, { useEffect, useState } from 'react';
-import { Container, Navbar, Tab, Tabs } from 'react-bootstrap';
+import React, { useState } from 'react';
+import { Tab, Tabs } from 'react-bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import CartComponent from './tabs/cart';
 import ClientComponent from './tabs/client';
@@ -108,12 +108,6 @@ const [cart, setCart] = useState<Product[]>([]);
 const [filter, setFilter] = useState<string>("none");
 const [organic, setOrganic] = useState<string>("noPreference");
 
-  // useEffect(() => {
-  //   localStorage.setItem("filter", "none")
-  //   localStorage.setItem("isOrganic", "noPreference")
-  //   var cart: number[] = [];
-  //   localStorage.setItem("cart", JSON.stringify(cart));
-  // })
   return (
     <div className="m-3">
         <Tabs defaultActiveKey="client">

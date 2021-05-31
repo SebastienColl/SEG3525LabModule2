@@ -45,7 +45,7 @@ const ProductsComponent: React.FC<ProductsComponentProps> = ({products, cart, fi
                     Veuillez modifier vos critères de recherche.
                 </h4> :
                 filteredProducts.sort((a,b) => a.price - b.price).map((p:Product, i:number) => {
-                    if (i % 3 == 0) {
+                    if (i % 3 === 0) {
                         return (
                             <Row className="my-3">
                                 <Col>
@@ -63,6 +63,8 @@ const ProductsComponent: React.FC<ProductsComponentProps> = ({products, cart, fi
                                 </Col>
                             </Row>
                         )
+                    } else {
+                        return <></>
                     }
                     
                 })}
